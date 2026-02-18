@@ -30,4 +30,4 @@ databases:
   - name: goatcounter-postgres
     databaseName: goatcounter
     user: goatcounter
-    postgresMajorVersion: 17
+    postgresMajorVersion: 13
