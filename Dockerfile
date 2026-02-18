@@ -5,8 +5,8 @@ RUN apt-get update && DEBIAN_FRONTEND="noninteractive" \
     tzdata \
     postgresql
 
-ENV GC_VERSION=v1.4.2
-ENV GC_BRANCH_NAME=release-1.4
+ENV GC_VERSION=v2.7.0
+ENV GC_BRANCH_NAME=release-2.7
 
 ADD https://github.com/zgoat/goatcounter/releases/download/${GC_VERSION}/goatcounter-${GC_VERSION}-linux-amd64.gz /bin/goatcounter.gz
 ADD https://raw.githubusercontent.com/zgoat/goatcounter/${GC_BRANCH_NAME}/db/schema.pgsql /db/schema.pgsql
