@@ -5,10 +5,22 @@ services:
     image:
       url: docker.io/arp242/goatcounter
     envVars:
-      - key: GOATCOUNTER_DB
+      - key: PGHOST
         fromDatabase:
           name: goatcounter-postgres
-          property: connectionString
+          property: host
+      - key: PGDATABASE
+        fromDatabase:
+          name: goatcounter-postgres
+          property: database
+      - key: PGUSER
+        fromDatabase:
+          name: goatcounter-postgres
+          property: user
+      - key: PGPASSWORD
+        fromDatabase:
+          name: goatcounter-postgres
+          property: password
 
 databases:
   - name: goatcounter-postgres
